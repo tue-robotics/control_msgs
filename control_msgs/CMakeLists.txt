@@ -12,6 +12,8 @@ add_action_files(DIRECTORY action FILES
 
 add_message_files(DIRECTORY msg FILES
   GripperCommand.msg
+  IOState.msg
+  IOStates.msg
   JointControllerState.msg
   JointTolerance.msg
   JointTrajectoryControllerState.msg
@@ -20,7 +22,8 @@ add_message_files(DIRECTORY msg FILES
 add_service_files(DIRECTORY srv FILES
   Calibrate.srv
   QueryCalibrationState.srv
-  QueryTrajectoryState.srv)
+  QueryTrajectoryState.srv
+  SetIO.srv)
 
 generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs std_msgs trajectory_msgs)
 
